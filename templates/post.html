@@ -1,0 +1,12 @@
+
+<div class="row">
+  <div class="col-sm-10 blog-main">
+  <div class="blog-post">
+   
+    <h2 class="blog-post-title"><a href="/blog/{{p.key().id()}}#">{{p.subject}}</a></h2>
+      <p class="blog-post-meta">{{p.created.strftime("%b %d, %Y")}} </p>
+
+            <p> {{p._render_text | safe}}</p>
+    </div>
+  </div>
+ </div><!-- /.blog-post -->

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
+      <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">New post</h2>
+
+        <label for="inputSubject" class="aria-label">Subject</label>
+        <name="subject" value="{{subject}}" id="inputSubject" class="form-control" placeholder="" required autofocus >
+
+        <label for="inputSubject" class="aria-label">Subject</label>
+        <textarea name="content">{{content}}</textarea>
+
+        <div class="error">
+            {{error}}
+        </div>
+
+        <input type="submit">
+      </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

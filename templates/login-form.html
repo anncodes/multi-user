@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-8 blog-main">
+      <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">Please login</h2>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" name="username" id="inputUsername" class="form-control" placeholder="username" value="{{username}}" required autofocus >
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" value="" required>
+
+        <div class="error">
+            {{error}}
+        </div>
+
+        <input type="submit">
+      </form>
+    </div>
+</div>
+
+{% endblock %}
+
+   
