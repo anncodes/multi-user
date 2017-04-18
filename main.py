@@ -75,25 +75,25 @@ def render_post(response, post):
     response.out.write('<b>' + post.subject + '</b><br>')
     response.out.write(post.content)
 
-class MainPage(BlogHandler):
-  def get(self):
-      self.write('Hello, Udacity!')
 
-
-
-
-##### blog stuffF
+##### Blog stuff
 
 def blog_key(name = 'default'):
     return db.Key.from_path('blogs', name)
 
-#  
 
 class Post(db.Model):
+    
+    user_id = db.IntegerProperty(required=True)
     subject = db.StringProperty(required = True)
     content = db.TextProperty(required = True)
     created = db.DateTimeProperty(auto_now_add = True)
     last_modified = db.DateTimeProperty(auto_now = True)
+
+    def getUserName(self):
+       
+        user = User.by_id(self.user_id)
+        return user.name
 
     def render(self):
         self._render_text = self.content.replace('\n', '<br>')
@@ -143,7 +143,7 @@ class PostPage(BlogHandler):
                                     str(self.user.key().id()))
                   if self.user.key().id() == post.user_id:
                     self.redirect("/blog/" + post_id +
-                                  "?error=You cannot like your " +
+                                  "?error=You cannot like your own " +
                                   "post.!!")
                     return
                   elif likes.count() == 0:
@@ -179,17 +179,18 @@ class NewPost(BlogHandler):
 
     def post(self):
         if not self.user:
-            self.redirect('/blog')
+            self.redirect('/login')
+            return
 
         subject = self.request.get('subject')
         content = self.request.get('content')
 
         if subject and content:
-            p = Post(parent = blog_key(), subject = subject, content = content)
+            p = Post(parent = blog_key(), user_id=self.user.key().id(), subject = subject, content = content)
             p.put()
             self.redirect('/blog/%s' % str(p.key().id()))
         else:
-            error = "subject and content, please!"
+            error = "Add content and subject"
             self.render("newpost.html", subject=subject, content=content, error=error)
 
 ### Deleting post #####
@@ -213,7 +214,7 @@ class EditPost(BlogHandler):
             key = db.Key.from_path('Post', int(post_id), parent=blog_key())
             post = db.get(key)
             if post.user_id == self.user.key().id():
-                self.render("editpost.html", subject=post.subject,
+                    self.render("editpost.html", subject=post.subject,
                     content=post.content)
             else:
                 self.redirect("/blog/" + post_id + "?error=No permission to delete this record.")

@@ -1,3 +1,33 @@
+{% extends "base.html" %}
 
+{% block content %}
+<div class="row">
+  <div class="col-sm-8 blog-main">
+  	<form class="form-signin" method="post">
+        <h2 class="form-signin-heading">Edit post</h2>
 
-<h2>>Edit post</h2>
+            <input type="hidden" id="post_id" name="post_id" value="{{post_id}}">
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" value="{{subject}}">
+            </div>
+           
+            <div class="form-group">
+                <label for="content">Your post</label>
+                <textarea class="form-control" id="content" name="content" value="{{content}}" rows="10">{{content}}</textarea>
+            </div>
+           
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                {{error}}
+            </div>
+            {% endif %}
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </form>
+  </div>
+</div>
+{% endblock %}

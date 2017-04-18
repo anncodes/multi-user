@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 
 <div class="row">
-        <div class="col-sm-8 blog-main">
 
+<div class="col-sm-8 blog-main">
 {% block content %}
-  <a href="/blog/deletepost/{{post.key().id()}}">Delete</a>
-  <a href="/blog/editpost/{{post.key().id()}}">Edit</a>
+  <a class="btn btn-primary" href="/blog/deletepost/{{post.key().id()}}">Delete</a>
+  <a class="btn btn-primary"href="/blog/editpost/{{post.key().id()}}">Edit</a>
   {{post.render() | safe}}
 </div>
 </div>
 
   <div class="row">
-        <div class="sub-work col-md-12">
+        <div class="col-md-12">
             <form method="post" role="form">
                 <input type="hidden" class="form-control" id="like" name="like" value="update">
                 <button type="submit" class="btn btn-primary">Like {{noOfLikes}}</button>
             </form>
         </div>
 
-        <div class="sub-work col-md-12">
+        <div class="col-md-12">
             <form method="post" role="form" class="comment-form">
                 <div class="form-group">
                     <label for="comment">Comment:</label>
@@ -28,7 +28,7 @@
             </form>
         </div>
 
-        <div class="sub-work col-md-12">
+        <div class="col-md-12">
             {% for c in comments %}
             <blockquote>
                 <a class="comment-delete btn btn-danger pull-right" href="/blog/deletecomment/{{post.key().id()}}/{{c.key().id()}}">Delete</a>
