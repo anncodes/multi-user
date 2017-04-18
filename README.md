@@ -1,5 +1,5 @@
 # MULTI USER BLOG PROJECT
-# Udacity Fullstack Nano Degree Programme
+<h2>Udacity Fullstack Nano Degree Programme</h2>
 
 <h3>Project description</h3>
 A multi user blog where users can sign and post blog posts as well as 'Like' and 'comment' on other posts made on the blog.
