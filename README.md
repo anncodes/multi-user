@@ -6,38 +6,38 @@ A multi user blog where users can sign and post blog posts as well as 'Like' and
 The blog is hosted on Google App Engine with an authentication system for users to be able to register and sign in and create, delete or edit blog posts.
 
 <h4>Directory structure</h4>
-models
-  - __init__.py
-  - __init__.pyc
-  - comment.py
-  - comment.pyc
-  - like.py
-  - like.pyc
-  - user.py
-  - user.pyc
- static
-  - blog.css
-  - bootstrap.min.css
-  - bootstrap.min.js
-  - ie10-viewport-bug-workaround.css
-  - ie10-viewport-bug-workaround.js
-  - signin.css
-templates
-  - base.html
-  - editpost.html
-  - front.html
-  - login-from.html
-  - newpost.html
-  - permalink.html
-  - post.html
-  -signup-form.html
- README.md
- app.yaml
- favicon.ico
- index.html
- index.yaml
- main.py
- main.pyc
+models<br />
+  - __init__.py<br />
+  - __init__.pyc<br />
+  - comment.py<br />
+  - comment.pyc<br />
+  - like.py<br />
+  - like.pyc<br />
+  - user.py<br />
+  - user.pyc<br />
+ static<br />
+  - blog.css<br />
+  - bootstrap.min.css<br />
+  - bootstrap.min.js<br />
+  - ie10-viewport-bug-workaround.css<br />
+  - ie10-viewport-bug-workaround.js<br />
+  - signin.css<br />
+templates<br />
+  - base.html<br />
+  - editpost.html<br />
+  - front.html<br />
+  - login-from.html<br />
+  - newpost.html<br />
+  - permalink.html<br />
+  - post.html<br />
+  -signup-form.html<br />
+ README.md<br />
+ app.yaml<br />
+ favicon.ico<br />
+ index.html<br />
+ index.yaml<br />
+ main.py<br />
+ main.pyc<br />
  
 <h4>Requirements</h4>
 Google App Engine
