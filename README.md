@@ -1,2 +1,9 @@
-# MULTI BLOG PROJECT
-# Udacity Fullstack Nano Degree Program
+# MULTI USER BLOG PROJECT
+# Udacity Fullstack Nano Degree Programme
+
+<h3>Project description</h3>
+A multi user blog where users can sign and post blog posts as well as 'Like' and 'comment' on other posts made on the blog.
+The blog is hosted on Google App Engine with an authentication system for users to be able to register and sign in and create, delete or edit blog posts.
+
+<h3>File structure and directory</h3>
+
