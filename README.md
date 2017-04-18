@@ -43,9 +43,10 @@ templates
 Google App Engine
 
 <h4>Instructions</h4>
-1. Install Google App Engine.
-2. Clone the project from https://github.com/anncodes/multi-user
-3. Import the application into the launcher.
-4. Click on the Run button.
-5. Click on Browse button to view the running app on a configured port.
-
+<ol>
+<li>Install Google App Engine.</li>
+<li>Clone the project from https://github.com/anncodes/multi-user</li>
+<li>Import the application into the launcher.</li>
+<li>Click on the Run button.</li>
+<li>Click on Browse button to view the running app on a configured port.</li>
+</ol>
