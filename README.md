@@ -3,8 +3,8 @@
 
 <h4>Project description</h4>
 A multi user blog where users can sign and post blog posts as well as 'Like' and 'Comment' on other posts made on the blog.
-The blog is hosted on Google App Engine with an authentication system for users to be able to register and sign in and create, delete or edit blog posts.
-
+The blog is hosted on Google App Engine with an authentication system for users to be able to register and sign in and create, delete or edit blog posts.<br />
+https://multi-user-blog-project-165020.appspot.com <br />
 <h4>Directory structure</h4>
 models<br />
   - __init__.py<br />
